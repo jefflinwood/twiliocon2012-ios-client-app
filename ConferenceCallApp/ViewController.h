@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)dial:(id)sender;
+- (IBAction)hangup:(id)sender;
 
 @end

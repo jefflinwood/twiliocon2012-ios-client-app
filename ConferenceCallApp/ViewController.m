@@ -26,4 +26,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)dial:(id)sender {
+}
+
+- (IBAction)hangup:(id)sender {
+}
 @end

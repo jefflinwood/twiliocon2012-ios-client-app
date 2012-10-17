@@ -71,11 +71,6 @@
 		28DDA61F162E797600C7ECBB = {
 			isa = PBXGroup;
 			children = (
-				28DDA659162E7C9D00C7ECBB /* SystemConfiguration.framework */,
-				28DDA657162E7C9500C7ECBB /* CFNetwork.framework */,
-				28DDA653162E7C8A00C7ECBB /* AudioToolbox.framework */,
-				28DDA654162E7C8A00C7ECBB /* AVFoundation.framework */,
-				28DDA651162E7C2800C7ECBB /* libTwilioClient.a */,
 				28DDA634162E797600C7ECBB /* ConferenceCallApp */,
 				28DDA62D162E797600C7ECBB /* Frameworks */,
 				28DDA62B162E797600C7ECBB /* Products */,
@@ -93,6 +88,11 @@
 		28DDA62D162E797600C7ECBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28DDA659162E7C9D00C7ECBB /* SystemConfiguration.framework */,
+				28DDA657162E7C9500C7ECBB /* CFNetwork.framework */,
+				28DDA653162E7C8A00C7ECBB /* AudioToolbox.framework */,
+				28DDA654162E7C8A00C7ECBB /* AVFoundation.framework */,
+				28DDA651162E7C2800C7ECBB /* libTwilioClient.a */,
 				28DDA62E162E797600C7ECBB /* UIKit.framework */,
 				28DDA630162E797600C7ECBB /* Foundation.framework */,
 				28DDA632162E797600C7ECBB /* CoreGraphics.framework */,
