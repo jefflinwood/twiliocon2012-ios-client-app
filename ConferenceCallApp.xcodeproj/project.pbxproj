@@ -282,6 +282,7 @@
 					1.1.0/Headers,
 				);
 				INFOPLIST_FILE = "ConferenceCallApp/ConferenceCallApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Twilio iOS SDK 1.1.0\"",
@@ -307,6 +308,7 @@
 					1.1.0/Headers,
 				);
 				INFOPLIST_FILE = "ConferenceCallApp/ConferenceCallApp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Twilio iOS SDK 1.1.0\"",
