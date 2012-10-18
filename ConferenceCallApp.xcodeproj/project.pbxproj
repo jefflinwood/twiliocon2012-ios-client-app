@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287766BF1630A5D600467C9C /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 287766BE1630A5D600467C9C /* libTwilioClient.a */; };
 		28DDA62F162E797600C7ECBB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DDA62E162E797600C7ECBB /* UIKit.framework */; };
 		28DDA631162E797600C7ECBB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DDA630162E797600C7ECBB /* Foundation.framework */; };
 		28DDA633162E797600C7ECBB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DDA632162E797600C7ECBB /* CoreGraphics.framework */; };
@@ -18,7 +19,6 @@
 		28DDA645162E797600C7ECBB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28DDA644162E797600C7ECBB /* Default-568h@2x.png */; };
 		28DDA648162E797600C7ECBB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28DDA646162E797600C7ECBB /* MainStoryboard.storyboard */; };
 		28DDA64B162E797600C7ECBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DDA64A162E797600C7ECBB /* ViewController.m */; };
-		28DDA652162E7C2800C7ECBB /* libTwilioClient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DDA651162E7C2800C7ECBB /* libTwilioClient.a */; };
 		28DDA655162E7C8A00C7ECBB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DDA653162E7C8A00C7ECBB /* AudioToolbox.framework */; };
 		28DDA656162E7C8A00C7ECBB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DDA654162E7C8A00C7ECBB /* AVFoundation.framework */; };
 		28DDA658162E7C9500C7ECBB /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28DDA657162E7C9500C7ECBB /* CFNetwork.framework */; };
@@ -26,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		287766BE1630A5D600467C9C /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTwilioClient.a; path = ../TwilioIOSSDK/libTwilioClient.a; sourceTree = "<group>"; };
 		28DDA62A162E797600C7ECBB /* ConferenceCallApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConferenceCallApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28DDA62E162E797600C7ECBB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28DDA630162E797600C7ECBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,7 +43,6 @@
 		28DDA647162E797600C7ECBB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		28DDA649162E797600C7ECBB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		28DDA64A162E797600C7ECBB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		28DDA651162E7C2800C7ECBB /* libTwilioClient.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTwilioClient.a; path = "../Twilio iOS SDK 1.1.0/libTwilioClient.a"; sourceTree = "<group>"; };
 		28DDA653162E7C8A00C7ECBB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		28DDA654162E7C8A00C7ECBB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		28DDA657162E7C9500C7ECBB /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -61,7 +61,7 @@
 				28DDA62F162E797600C7ECBB /* UIKit.framework in Frameworks */,
 				28DDA631162E797600C7ECBB /* Foundation.framework in Frameworks */,
 				28DDA633162E797600C7ECBB /* CoreGraphics.framework in Frameworks */,
-				28DDA652162E7C2800C7ECBB /* libTwilioClient.a in Frameworks */,
+				287766BF1630A5D600467C9C /* libTwilioClient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,11 +88,11 @@
 		28DDA62D162E797600C7ECBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				287766BE1630A5D600467C9C /* libTwilioClient.a */,
 				28DDA659162E7C9D00C7ECBB /* SystemConfiguration.framework */,
 				28DDA657162E7C9500C7ECBB /* CFNetwork.framework */,
 				28DDA653162E7C8A00C7ECBB /* AudioToolbox.framework */,
 				28DDA654162E7C8A00C7ECBB /* AVFoundation.framework */,
-				28DDA651162E7C2800C7ECBB /* libTwilioClient.a */,
 				28DDA62E162E797600C7ECBB /* UIKit.framework */,
 				28DDA630162E797600C7ECBB /* Foundation.framework */,
 				28DDA632162E797600C7ECBB /* CoreGraphics.framework */,
@@ -275,17 +275,13 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ConferenceCallApp/ConferenceCallApp-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					/Users/jlinwood/Desktop/TwilioConIOSApp/Twilio,
-					iOS,
-					SDK,
-					1.1.0/Headers,
-				);
+				HEADER_SEARCH_PATHS = /Users/jlinwood/Desktop/TwilioConIOSApp/TwilioIOSSDK/Headers;
 				INFOPLIST_FILE = "ConferenceCallApp/ConferenceCallApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Twilio iOS SDK 1.1.0\"",
+					"\"$(SRCROOT)/../TwilioIOSSDK\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -301,17 +297,13 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ConferenceCallApp/ConferenceCallApp-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					/Users/jlinwood/Desktop/TwilioConIOSApp/Twilio,
-					iOS,
-					SDK,
-					1.1.0/Headers,
-				);
+				HEADER_SEARCH_PATHS = /Users/jlinwood/Desktop/TwilioConIOSApp/TwilioIOSSDK/Headers;
 				INFOPLIST_FILE = "ConferenceCallApp/ConferenceCallApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../Twilio iOS SDK 1.1.0\"",
+					"\"$(SRCROOT)/../TwilioIOSSDK\"",
 				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -341,6 +333,7 @@
 				28DDA650162E797600C7ECBB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,17 +8,46 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+#import "TCDevice.h"
+#import "TCConnection.h"
 
+@interface ViewController ()
+@property (nonatomic, strong) TCDevice *device;
+@property (nonatomic, strong) TCConnection *connection;
+
+- (void) initTwilio;
 @end
 
 @implementation ViewController
+
+- (void) initTwilio {
+    NSURL* url = [NSURL URLWithString:@"http://confcallserver.herokuapp.com/token"];
+    NSURLResponse* response = nil;
+    NSError* error = nil;
+    NSData* data = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:url]
+                                         returningResponse:&response
+                                                     error:&error];
+    if (data) {
+        NSHTTPURLResponse*  httpResponse = (NSHTTPURLResponse*)response;
+        if (httpResponse.statusCode == 200)
+        {
+            NSString* capabilityToken =
+            [[NSString alloc] initWithData:data
+                                  encoding:NSUTF8StringEncoding];
+            self.device = [[TCDevice alloc] initWithCapabilityToken:capabilityToken
+                                                           delegate:nil];
+        }
+        else {
+            NSLog(@"Error logging in: %@", [error localizedDescription]);
+        }
+    }
+}
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-
+        [self initTwilio];
     }
     return self;
 }
@@ -36,8 +65,10 @@
 }
 
 - (IBAction)dial:(id)sender {
+    self.connection = [self.device connect:nil delegate:nil];
 }
 
 - (IBAction)hangup:(id)sender {
+     [self.connection disconnect];
 }
 @end
