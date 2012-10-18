@@ -1,0 +1,16 @@
+TwilioCon 2012 iPhone Demo app
+
+Requires the Twilio iOS Client SDK
+
+Need to add libTwilioClientSDK.a
+Need to add Twilio iOS Client SDK Headers folder to Headers Search Path
+
+Otherwise this won't even compile.
+
+Basic App:
+==========
+* Gets a capability token asynchronously
+* Shows/hides "Logging into Twilio" message
+* Enables/disables Dial and Hangup buttons
+
+This app requires a server component that will supply a capability token.
