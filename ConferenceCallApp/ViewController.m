@@ -15,35 +15,11 @@
 @property (nonatomic, strong) TCDevice *device;
 @property (nonatomic, strong) TCConnection *connection;
 
-- (void) initTwilio;
 - (void) initTwilioAsync;
 
 @end
 
 @implementation ViewController
-
-- (void) initTwilio {
-    NSURL* url = [NSURL URLWithString:@"http://confcallserver.herokuapp.com/token"];
-    NSURLResponse* response = nil;
-    NSError* error = nil;
-    NSData* data = [NSURLConnection sendSynchronousRequest:[NSURLRequest requestWithURL:url]
-                                         returningResponse:&response
-                                                     error:&error];
-    if (data) {
-        NSHTTPURLResponse*  httpResponse = (NSHTTPURLResponse*)response;
-        if (httpResponse.statusCode == 200)
-        {
-            NSString* capabilityToken =
-            [[NSString alloc] initWithData:data
-                                  encoding:NSUTF8StringEncoding];
-            self.device = [[TCDevice alloc] initWithCapabilityToken:capabilityToken
-                                                           delegate:nil];
-        }
-        else {
-            NSLog(@"Error logging in: %@", [error localizedDescription]);
-        }
-    }
-}
 
 - (void) initTwilioAsync {
     NSURL* url = [NSURL URLWithString:@"http://confcallserver.herokuapp.com/token"];
