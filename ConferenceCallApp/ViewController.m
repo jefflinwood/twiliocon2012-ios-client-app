@@ -49,20 +49,11 @@
    }
 
 
-
-
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
-        [self initTwilioAsync];
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self initTwilioAsync];
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
