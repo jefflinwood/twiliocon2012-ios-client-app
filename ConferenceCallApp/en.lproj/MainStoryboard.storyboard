@@ -13,7 +13,7 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A2T-jx-vuX">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="A2T-jx-vuX">
                                 <rect key="frame" x="124" y="100" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -28,7 +28,7 @@
                                     <action selector="dial:" destination="2" eventType="touchUpInside" id="nMP-bY-8Gq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HhX-Sp-0Gq">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HhX-Sp-0Gq">
                                 <rect key="frame" x="124" y="327" width="73" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -43,9 +43,21 @@
                                     <action selector="hangup:" destination="2" eventType="touchUpInside" id="5D3-8V-i1f"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Logging into Twilio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WQM-CW-cZy">
+                                <rect key="frame" x="90" y="36" width="141" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="dialButton" destination="A2T-jx-vuX" id="9t1-9l-MAr"/>
+                        <outlet property="hangupButton" destination="HhX-Sp-0Gq" id="3H0-hF-I0e"/>
+                        <outlet property="loggingInLabel" destination="WQM-CW-cZy" id="jGk-Mn-HdT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
@@ -57,6 +69,9 @@
             <relationships>
                 <relationship kind="action" name="dial:"/>
                 <relationship kind="action" name="hangup:"/>
+                <relationship kind="outlet" name="dialButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="hangupButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="loggingInLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

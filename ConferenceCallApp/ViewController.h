@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIButton *dialButton;
+@property (strong, nonatomic) IBOutlet UIButton *hangupButton;
+@property (strong, nonatomic) IBOutlet UILabel *loggingInLabel;
+
+
 - (IBAction)dial:(id)sender;
 - (IBAction)hangup:(id)sender;
 

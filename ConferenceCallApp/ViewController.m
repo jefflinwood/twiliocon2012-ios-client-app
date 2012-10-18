@@ -16,6 +16,8 @@
 @property (nonatomic, strong) TCConnection *connection;
 
 - (void) initTwilio;
+- (void) initTwilioAsync;
+
 @end
 
 @implementation ViewController
@@ -43,11 +45,41 @@
     }
 }
 
+- (void) initTwilioAsync {
+    NSURL* url = [NSURL URLWithString:@"http://confcallserver.herokuapp.com/token"];
+
+    [NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:url] queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+    if (data) {
+        NSHTTPURLResponse*  httpResponse = (NSHTTPURLResponse*)response;
+        if (httpResponse.statusCode == 200)
+        {
+            NSString* capabilityToken =
+            [[NSString alloc] initWithData:data
+                                  encoding:NSUTF8StringEncoding];
+            self.device = [[TCDevice alloc] initWithCapabilityToken:capabilityToken
+                                                           delegate:nil];
+            self.loggingInLabel.hidden = TRUE;
+            self.dialButton.enabled = TRUE;
+            self.hangupButton.enabled = FALSE;
+            
+        }
+        else {
+            NSLog(@"Error logging in: %@", [error localizedDescription]);
+        }
+    }
+
+    }];
+    
+   }
+
+
+
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self initTwilio];
+        [self initTwilioAsync];
     }
     return self;
 }
@@ -66,9 +98,19 @@
 
 - (IBAction)dial:(id)sender {
     self.connection = [self.device connect:nil delegate:nil];
+    self.dialButton.enabled = FALSE;
+    self.hangupButton.enabled = TRUE;
 }
 
 - (IBAction)hangup:(id)sender {
      [self.connection disconnect];
+    self.hangupButton.enabled = FALSE;
+    self.dialButton.enabled = TRUE;
+}
+- (void)viewDidUnload {
+    [self setDialButton:nil];
+    [self setHangupButton:nil];
+    [self setLoggingInLabel:nil];
+    [super viewDidUnload];
 }
 @end
